@@ -3,226 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f6f7f4">
-    <meta name="description" content="Mansoor Shaik — Computer Science graduate and banking professional building expertise in data analytics, Excel, SQL and Power BI.">
-    <title>Mansoor Shaik | Data &amp; Banking</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Mansoor Shaik — aspiring Data Analyst building skills in Excel, SQL, Power BI and Python, with professional banking and reporting experience.">
+    <title>Mansoor Shaik | Aspiring Data Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-
+    <!-- Navigation -->
     <header class="site-header">
-        <nav class="navbar wrap" aria-label="Main navigation">
-            <a class="brand" href="#home" aria-label="Mansoor Shaik home">ms<span>.</span></a>
-            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
-                <span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Mansoor home">MANSOOR<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero wrap" id="home">
-            <div class="hero-copy reveal">
-                <p class="eyebrow"><span class="status-dot"></span> BANKING PROFESSIONAL · FUTURE DATA ANALYST</p>
-                <h1>Turning business<br>questions into <em>insight.</em></h1>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="small-text">HELLO, I'M</p>
+                <h1>Mansoor <span>Shaik</span></h1>
+                <h2>Aspiring Data Analyst</h2>
                 <p class="hero-description">
-                    I'm Mansoor Shaik — a Computer Science graduate working in branch banking
-                    and building practical skills in data analysis, reporting and business intelligence.
+                    Computer Science graduate with professional experience in banking,
+                    customer data and reporting — now building expertise in Excel,
+                    SQL, Power BI and Python.
                 </p>
-                <div class="hero-actions">
-                    <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
-                    <a class="button button-light" href="assets/resume/resume.pdf" download>Download resume <span aria-hidden="true">↓</span></a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Projects</a>
+                    <a href="assets/resume/resume.pdf" class="btn secondary-btn" download>Download Resume</a>
                 </div>
-                <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/mansoor-shaik23" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-                    <a href="mailto:skmansoor41@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/mansoor-shaik23" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="mailto:skmansoor41@gmail.com">Email ↗</a>
                 </div>
             </div>
 
-            <div class="hero-art reveal" aria-label="Illustration of a business analytics dashboard">
-                <div class="art-topline"><span>ANALYTICS / 001</span><span>LEARN · ANALYSE · IMPROVE</span></div>
-                <div class="art-main">
-                    <div class="art-heading">
-                        <span class="art-label">BUSINESS SNAPSHOT</span>
-                        <span class="art-period">SAMPLE VIEW</span>
-                    </div>
-                    <div class="metric-row">
-                        <div class="metric">
-                            <span class="metric-name">DATA</span>
-                            <strong>01</strong>
-                            <span class="metric-caption">Collect &amp; clean</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-name">ANALYSIS</span>
-                            <strong>02</strong>
-                            <span class="metric-caption">Find patterns</span>
-                        </div>
-                        <div class="metric metric-accent">
-                            <span class="metric-name">INSIGHT</span>
-                            <strong>03</strong>
-                            <span class="metric-caption">Guide decisions</span>
-                        </div>
-                    </div>
-                    <div class="chart-panel">
-                        <div class="chart-head"><span>MONTHLY PERFORMANCE</span><span>ILLUSTRATIVE</span></div>
-                        <div class="bar-chart" aria-hidden="true">
-                            <i style="--bar:32%"></i><i style="--bar:49%"></i><i style="--bar:40%"></i><i style="--bar:68%"></i><i style="--bar:56%"></i><i style="--bar:82%"></i><i style="--bar:72%"></i><i style="--bar:94%"></i>
-                        </div>
-                        <div class="chart-months"><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span></div>
-                    </div>
-                    <div class="art-footer"><span>TOOLS I’M BUILDING</span><span>EXCEL / SQL / POWER BI</span></div>
+            <div class="analytics-visual" aria-label="Analytics process: data, analyze, insight">
+                <div class="visual-title"><span></span> ANALYTICS PROCESS</div>
+                <div class="data-card">
+                    <span class="card-label">DATA</span>
+                    <strong>01</strong>
                 </div>
-                <div class="art-stamp">DATA<br>WITH<br>PURPOSE<span>✳</span></div>
-            </div>
-            <a class="scroll-cue" href="#about"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
-        </section>
-
-        <section class="section wrap about-section" id="about">
-            <div class="section-intro reveal">
-                <p class="section-kicker">01 / A LITTLE ABOUT ME</p>
-                <h2>Business experience.<br><em>Analytical mindset.</em></h2>
-            </div>
-            <div class="about-copy reveal">
-                <p class="lead">I bring a frontline banking perspective to the way I learn data.</p>
-                <p>My experience across loan sales, a structured banking programme and branch operations has helped me understand customer needs, process accuracy and business reporting. I'm now developing my analytics toolkit through consistent practice and projects based on realistic business questions.</p>
-                <div class="about-facts">
-                    <div><strong>2024</strong><span>B.Tech graduate</span></div>
-                    <div><strong>Banking</strong><span>Professional experience</span></div>
-                    <div><strong>Next</strong><span>Analytics &amp; BI</span></div>
+                <div class="data-line"></div>
+                <div class="data-card">
+                    <span class="card-label">ANALYZE</span>
+                    <strong>02</strong>
                 </div>
+                <div class="data-line"></div>
+                <div class="data-card">
+                    <span class="card-label">INSIGHT</span>
+                    <strong>03</strong>
+                </div>
+                <div class="visual-footer">Excel · SQL · Power BI · Python</div>
             </div>
         </section>
 
-        <section class="section skills-section" id="skills">
-            <div class="wrap">
-                <div class="section-heading reveal">
-                    <div><p class="section-kicker">02 / TOOLKIT</p><h2>Learning by <em>doing.</em></h2></div>
-                    <p>My focus is on practical skills that help turn raw data into clear, useful decisions.</p>
-                </div>
-                <div class="skills-grid">
-                    <article class="skill-card reveal"><span class="skill-index">01</span><div class="skill-icon">X</div><h3>Microsoft Excel</h3><p>Formulas, lookups, conditional logic, PivotTables and reporting.</p><span class="skill-level"><i></i> LEARNING &amp; PRACTISING</span></article>
-                    <article class="skill-card reveal"><span class="skill-index">02</span><div class="skill-icon skill-icon-sql">SQL</div><h3>SQL &amp; Databases</h3><p>DBMS fundamentals, query writing, filtering, aggregation and joins.</p><span class="skill-level"><i></i> LEARNING &amp; PRACTISING</span></article>
-                    <article class="skill-card reveal"><span class="skill-index">03</span><div class="skill-icon skill-icon-bi">▥</div><h3>Power BI</h3><p>Data modelling, visuals, dashboards and business performance metrics.</p><span class="skill-level"><i></i> DEVELOPING</span></article>
-                    <article class="skill-card reveal"><span class="skill-index">04</span><div class="skill-icon skill-icon-py">Py</div><h3>Python</h3><p>Programming foundations and a growing toolkit for data analysis.</p><span class="skill-level"><i></i> DEVELOPING</span></article>
-                </div>
+        <!-- About -->
+        <section id="about" class="section">
+            <p class="section-label">01 — ABOUT ME</p>
+            <h2>Building my path into <span>Data Analytics.</span></h2>
+            <p class="section-text">
+                I am a Computer Science graduate with professional experience in banking
+                operations, customer data handling and Excel-based reporting. I am currently
+                developing my data analytics skills and building practical projects using
+                analytical tools to solve business problems.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <p class="section-label">02 — TECHNICAL TOOLKIT</p>
+            <h2>Tools to turn data into <span>insights.</span></h2>
+            <p class="section-text">
+                Building a practical toolkit for data analysis, reporting and business intelligence.
+            </p>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-number">01</div>
+                    <h3>Microsoft Excel</h3>
+                    <p>Data cleaning, formulas, lookups, PivotTables and reporting.</p>
+                    <div class="skill-status">LEARNING &amp; PRACTISING</div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-number">02</div>
+                    <h3>SQL</h3>
+                    <p>Database concepts, queries and data retrieval.</p>
+                    <div class="skill-status">LEARNING &amp; PRACTISING</div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-number">03</div>
+                    <h3>Power BI</h3>
+                    <p>Data visualization, dashboards and business insights.</p>
+                    <div class="skill-status">DEVELOPING</div>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-number">04</div>
+                    <h3>Python</h3>
+                    <p>Programming fundamentals and data analysis.</p>
+                    <div class="skill-status">DEVELOPING</div>
+                </article>
             </div>
         </section>
 
-        <section class="section wrap projects-section" id="projects">
-            <div class="section-heading reveal">
-                <div><p class="section-kicker">03 / SELECTED WORK</p><h2>Projects with a <em>purpose.</em></h2></div>
-                <p>These are portfolio case studies in preparation. I’ll add findings and screenshots as each project is completed.</p>
-            </div>
+        <!-- Projects -->
+        <section id="projects" class="section projects-section">
+            <p class="section-label">03 — SELECTED PROJECTS</p>
+            <h2>Analytics projects in <span>progress.</span></h2>
+            <p class="section-text">
+                Portfolio projects planned to demonstrate practical analysis, reporting and business thinking.
+            </p>
+
             <div class="projects-grid">
-                <article class="project-card project-feature reveal">
-                    <div class="project-card-top"><span>CASE STUDY / 01</span><span class="project-symbol">↗</span></div>
-                    <div class="project-illustration loan-illustration" aria-hidden="true"><div class="mini-window"><span></span><span></span><span></span><div class="mini-lines"><i></i><i></i><i></i></div><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="mini-float">LOAN<br>INSIGHTS</div></div>
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-index">PROJECT 01</span>
+                        <span class="project-icon" aria-hidden="true">BI</span>
+                    </div>
+                    <p class="project-type">DATA ANALYTICS</p>
+                    <h3>Sales Performance Analysis</h3>
+                    <p class="project-description">
+                        A planned project to explore sales trends, revenue, product performance
+                        and business KPIs using Excel, SQL and Power BI.
+                    </p>
+                    <div class="project-tags">
+                        <span>Excel</span>
+                        <span>SQL</span>
+                        <span>Power BI</span>
+                    </div>
+                    <div class="project-footer">Planned project · In preparation</div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-index">PROJECT 02</span>
+                        <span class="project-icon" aria-hidden="true">DATA</span>
+                    </div>
                     <p class="project-type">BANKING ANALYTICS</p>
-                    <h3>Loan Portfolio Analysis</h3>
-                    <p>Explore a sample loan dataset to understand application patterns, approval rates, loan values and portfolio trends.</p>
-                    <div class="tag-row"><span>Excel</span><span>SQL</span><span>Power BI</span></div>
-                    <div class="project-status">IN PREPARATION <span>↗</span></div>
-                </article>
-                <article class="project-card reveal">
-                    <div class="project-card-top"><span>CASE STUDY / 02</span><span class="project-symbol">↗</span></div>
-                    <div class="project-illustration sales-illustration" aria-hidden="true"><div class="sales-big-number">SALES<span>OVERVIEW</span></div><div class="sales-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-                    <p class="project-type">BUSINESS INTELLIGENCE</p>
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Study monthly revenue, product performance, sales trends and key business KPIs.</p>
-                    <div class="tag-row"><span>Excel</span><span>Power BI</span><span>KPI analysis</span></div>
-                    <div class="project-status">IN PREPARATION <span>↗</span></div>
+                    <h3>Banking Loan Portfolio Analysis</h3>
+                    <p class="project-description">
+                        A planned analysis of a sample loan dataset to examine application
+                        trends, approval rates, loan amounts and portfolio performance.
+                    </p>
+                    <div class="project-tags">
+                        <span>Excel</span>
+                        <span>SQL</span>
+                        <span>Power BI</span>
+                    </div>
+                    <div class="project-footer">Planned project · In preparation</div>
                 </article>
             </div>
         </section>
 
-        <section class="section education-section" id="education">
-            <div class="wrap">
-                <div class="section-heading reveal">
-                    <div><p class="section-kicker">04 / EDUCATION</p><h2>Where I <em>started.</em></h2></div>
-                    <p>Academic foundations and structured banking training that support my professional growth.</p>
-                </div>
-                <div class="education-list">
-                    <article class="education-item reveal">
-                        <div class="education-date">SEP 2025 — OCT 2026</div>
-                        <div class="education-detail"><span class="education-type">BANKING PROGRAMME</span><h3>PG Diploma in Banking and Customer Services</h3><p>Manipal · Programme includes classroom training in Bengaluru, internship at IDFC FIRST Bank, Kakinada, and on-the-job training.</p></div>
-                        <span class="education-arrow" aria-hidden="true">↗</span>
-                    </article>
-                    <article class="education-item reveal">
-                        <div class="education-date">2020 — 2024</div>
-                        <div class="education-detail"><span class="education-type">UNDERGRADUATE</span><h3>B.Tech, Computer Science</h3><p>University College of Engineering, Narasaraopet · JNTU · Graduated May 2024 · CGPA 7.0/10</p></div>
-                        <span class="education-arrow" aria-hidden="true">↗</span>
-                    </article>
-                    <article class="education-item reveal">
-                        <div class="education-date">2018 — 2020</div>
-                        <div class="education-detail"><span class="education-type">INTERMEDIATE</span><h3>Sri Chaitanya Junior College</h3><p>Bapatla · Score 9.0/10</p></div>
-                        <span class="education-arrow" aria-hidden="true">↗</span>
-                    </article>
-                    <article class="education-item reveal">
-                        <div class="education-date">2018</div>
-                        <div class="education-detail"><span class="education-type">SECONDARY SCHOOL</span><h3>Little Angels High School</h3><p>Bapatla · SSC score 10.0/10</p></div>
-                        <span class="education-arrow" aria-hidden="true">↗</span>
-                    </article>
-                </div>
-            </div>
+        <!-- Education -->
+        <section id="education" class="section">
+            <p class="section-label">04 — EDUCATION</p>
+            <h2>Education &amp; <span>training.</span></h2>
+
+            <article class="experience-card">
+                <p class="experience-date">SEP 2025 — OCT 2026</p>
+                <h3>PG Diploma in Banking and Customer Services</h3>
+                <h4>Manipal | Banking Programme</h4>
+                <p><strong>September 2025 – October 2026</strong></p>
+                <p>
+                    Programme includes classroom training in Bengaluru, a banking internship
+                    at IDFC FIRST Bank in Kakinada, and on-the-job training.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <p class="experience-date">2020 — 2024</p>
+                <h3>Bachelor of Technology (B.Tech) — Computer Science</h3>
+                <h4>University College of Engineering, Narasaraopet | JNTU</h4>
+                <p>Graduated May 2024 · CGPA: 7.0/10</p>
+            </article>
+
+            <article class="experience-card">
+                <p class="experience-date">2018 — 2020</p>
+                <h3>Intermediate</h3>
+                <h4>Sri Chaitanya Junior College, Bapatla</h4>
+                <p>Score: 9.0/10</p>
+            </article>
+
+            <article class="experience-card">
+                <p class="experience-date">2018</p>
+                <h3>Secondary School Certificate (SSC)</h3>
+                <h4>Little Angels High School, Bapatla</h4>
+                <p>Score: 10.0/10</p>
+            </article>
         </section>
 
-        <section class="section wrap experience-section" id="experience">
-            <div class="section-heading reveal">
-                <div><p class="section-kicker">05 / EXPERIENCE</p><h2>My professional <em>journey.</em></h2></div>
-                <p>Learning how banking works from customer-facing roles to branch operations.</p>
-            </div>
-            <div class="timeline">
-                <article class="timeline-item reveal">
-                    <div class="timeline-marker"></div><div class="timeline-content">
-                        <div class="timeline-meta"><span>MAY 2026 — PRESENT</span><span class="work-type current">CURRENT ROLE</span></div>
-                        <h3>Banker Customer Services (BCS)</h3><h4>IDFC FIRST Bank · On-roll</h4>
-                        <p class="timeline-location">Guntur Branch · Joined 13 May 2026</p>
-                        <p>Supporting branch banking operations and customer service, assisting customers with day-to-day banking needs and operational requirements.</p>
-                    </div>
-                </article>
-                <article class="timeline-item reveal">
-                    <div class="timeline-marker"></div><div class="timeline-content">
-                        <div class="timeline-meta"><span>FEB 2026 — MAY 2026</span><span class="work-type">INTERNSHIP</span></div>
-                        <h3>Banking Internship</h3><h4>IDFC FIRST Bank</h4>
-                        <p class="timeline-location">Kakinada · 9 February – 12 May 2026</p>
-                        <p>Gained branch-based exposure to customer service and day-to-day banking operations as part of the banking programme.</p>
-                    </div>
-                </article>
-                <article class="timeline-item reveal">
-                    <div class="timeline-marker"></div><div class="timeline-content">
-                        <div class="timeline-meta"><span>NOV 2024 — SEP 2025</span><span class="work-type">OFF-ROLL</span></div>
-                        <h3>Direct Sales Team — STLAP / Suvidha</h3><h4>IDFC FIRST Bank · Off-roll</h4>
-                        <p class="timeline-location">Joined 20 November 2024</p>
-                        <p>Supported small-ticket loan-against-property sales through lead follow-ups, customer engagement, coordination and Excel-based tracking and reporting.</p>
-                        <div class="partner-history"><span>PAYROLL / SERVICE PARTNERS</span><ul><li>ME Hin Technologies · 20 Nov 2024 – 20 Mar 2025</li><li>Resowhiz Biz Solutions · 21 Mar – 6 Jul 2025</li><li>Buzzworks Business Services Pvt. Ltd. · 7 Jul – 3 Sep 2025</li></ul></div>
-                    </div>
-                </article>
-            </div>
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <p class="section-label">05 — EXPERIENCE</p>
+            <h2>Professional <span>journey.</span></h2>
+
+            <article class="experience-card">
+                <p class="experience-date">MAY 2026 — PRESENT</p>
+                <h3>Banker Customer Services (BCS) — Branch Operations</h3>
+                <h4>IDFC FIRST Bank | On-roll</h4>
+                <p><strong>Guntur Branch · Joined 13 May 2026</strong></p>
+                <p>
+                    Supporting branch banking operations and customer service, helping
+                    customers with banking services and day-to-day operational requirements.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <p class="experience-date">FEB 2026 — MAY 2026</p>
+                <h3>Banking Internship</h3>
+                <h4>IDFC FIRST Bank | Kakinada</h4>
+                <p><strong>9 February 2026 – 12 May 2026</strong></p>
+                <p>
+                    Completed branch-based internship experience, gaining exposure to
+                    customer service and day-to-day branch banking operations.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <p class="experience-date">NOV 2024 — SEP 2025</p>
+                <h3>Direct Sales Team — Small Ticket Loan Against Property (STLAP / Suvidha)</h3>
+                <h4>IDFC FIRST Bank | Off-roll</h4>
+                <p><strong>Joined 20 November 2024</strong></p>
+                <p>
+                    Supported loan sales and customer engagement, followed up on leads,
+                    coordinated with customers and maintained Excel-based tracking and reporting.
+                </p>
+                <p><strong>Payroll / service partner history:</strong></p>
+                <ul>
+                    <li>ME Hin Technologies — 20 November 2024 to 20 March 2025</li>
+                    <li>Resowhiz Biz Solutions — 21 March 2025 to 6 July 2025</li>
+                    <li>Buzzworks Business Services Pvt. Ltd. — 7 July 2025 to 3 September 2025</li>
+                </ul>
+            </article>
         </section>
 
-        <section class="contact-section" id="contact">
-            <div class="wrap contact-inner reveal">
-                <p class="section-kicker">06 / CONTACT</p>
-                <h2>Have a good<br>question? <em>Let’s talk.</em></h2>
-                <p>I’m building my path into data analytics and open to connecting with people working in data, business intelligence and technology.</p>
-                <div class="contact-actions"><a class="button button-cream" href="mailto:skmansoor41@gmail.com">Send me an email <span aria-hidden="true">↗</span></a><a class="contact-link" href="https://www.linkedin.com/in/mansoor-shaik23" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div>
-                <div class="contact-bottom"><span>HYDERABAD, INDIA</span><span>OPEN TO LEARNING &amp; OPPORTUNITIES</span></div>
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <p class="section-label">06 — CONTACT</p>
+            <h2>Let's connect.</h2>
+            <p>Interested in data, analytics, or collaboration? Feel free to reach out.</p>
+            <div class="contact-links">
+                <a href="mailto:skmansoor41@gmail.com">skmansoor41@gmail.com</a>
+                <a href="https://www.linkedin.com/in/mansoor-shaik23" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#home">ms<span>.</span></a><p>Designed and built by Mansoor Shaik</p><p>© <span id="currentYear">2026</span> · HTML, CSS &amp; JavaScript</p><a class="back-top" href="#home" aria-label="Back to top">↑</a></div></footer>
+    <footer>
+        <p>© 2026 Mansoor Shaik. Built with HTML &amp; CSS.</p>
+    </footer>
 </body>
 </html>
