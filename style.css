@@ -784,3 +784,137 @@ footer {
         margin-left: 0;
     }
 }
+
+
+/* ================================
+   LIGHT THEME — WHITE & SOFT BLUE
+================================ */
+:root {
+    --bg: #f7f9fc;
+    --panel: #ffffff;
+    --panel-light: #eef4fb;
+    --cyan: #087ea4;
+    --text: #172033;
+    --muted: #5b6678;
+    --border: #dce4ee;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.site-header {
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom-color: #e2e8f0;
+}
+
+.nav-links a,
+.hero h2,
+.secondary-btn,
+.hero-socials a,
+.visual-title,
+.card-label,
+.education-card h4,
+.experience-card h4 {
+    color: #465469;
+}
+
+.hero-description,
+.section-text,
+.skill-card p,
+.project-description,
+.experience-card > p:last-child,
+.education-summary,
+.education-institution,
+.education-details p {
+    color: var(--muted);
+}
+
+.secondary-btn {
+    border-color: #cbd5e1;
+}
+
+.data-card {
+    background: linear-gradient(145deg, #e5f6fc, #ffffff);
+    border-color: #d7e8f2;
+}
+
+.visual-footer,
+.project-footer,
+footer {
+    color: #68758a;
+}
+
+.skill-card,
+.education-card {
+    background: linear-gradient(145deg, #ffffff, #f2f7fc);
+    border-color: var(--border);
+}
+
+.project-card,
+.experience-card {
+    background: #ffffff;
+    border-color: var(--border);
+}
+
+.project-card h3,
+.skill-card h3,
+.education-card h3,
+.experience-card h3 {
+    color: #172033;
+}
+
+.project-index {
+    color: #68758a;
+}
+
+.project-tags span {
+    color: #344256;
+    background: #edf4fa;
+    border-color: #d8e4ef;
+}
+
+.project-footer,
+.education-details,
+.education-result {
+    border-color: #e0e7ef;
+}
+
+.education-featured {
+    border-color: #b8dce9;
+}
+
+.result-score {
+    border-color: #b8dce9;
+    background: #eaf7fb;
+}
+
+footer {
+    border-top-color: #e2e8f0;
+}
+
+.primary-btn {
+    background: #087ea4;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    box-shadow: 0 10px 30px rgba(8, 126, 164, 0.18);
+}
+
+.project-icon {
+    background: #e3f5fa;
+}
+
+.data-card strong {
+    color: #087ea4;
+}
+
+.data-line {
+    background: #087ea4;
+}
+
+.visual-title span {
+    background: #087ea4;
+}
