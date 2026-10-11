@@ -263,7 +263,7 @@
                 <p class="experience-date">MAY 2026 — PRESENT</p>
                 <h3>Banker Customer Services (BCS) — Branch Operations</h3>
                 <h4>IDFC FIRST Bank | On-roll</h4>
-                <p><strong>Guntur Branch · Joined 13 May 2026</strong></p>
+                <p><strong>Guntur Branch · Joined May 2026</strong></p>
                 <p>
                     Supporting branch banking operations and customer service, helping
                     customers with banking services and day-to-day operational requirements.
@@ -274,7 +274,7 @@
                 <p class="experience-date">FEB 2026 — MAY 2026</p>
                 <h3>Banking Internship</h3>
                 <h4>IDFC FIRST Bank | Kakinada</h4>
-                <p><strong>9 February 2026 – 12 May 2026</strong></p>
+                <p><strong>February 2026 – May 2026</strong></p>
                 <p>
                     Completed branch-based internship experience, gaining exposure to
                     customer service and day-to-day branch banking operations.
@@ -285,7 +285,7 @@
                 <p class="experience-date">NOV 2024 — SEP 2025</p>
                 <h3>Direct Sales Team — Small Ticket Loan Against Property (STLAP / Suvidha)</h3>
                 <h4>IDFC FIRST Bank | Off-roll</h4>
-                <p><strong>Joined 20 November 2024</strong></p>
+                <p><strong>Joined November 2024</strong></p>
                 <p>
                     Supported loan sales and customer engagement, followed up on leads,
                     coordinated with customers and maintained Excel-based tracking and reporting.
@@ -340,8 +340,8 @@
                     ["On-the-job training", "Banking operations and customer service", "May 2026 – October 2026"]
                 ],
                 certificates: [
-                    { label: "PG Diploma certificate (add PDF)", href: "assets/certificates/pg-diploma.pdf" },
-                    { label: "Training certificate (add PDF)", href: "assets/certificates/banking-training.pdf" }
+                    { label: "PG Diploma certificate", filename: "pg-diploma.pdf" },
+                    { label: "Banking training certificate", filename: "banking-training.pdf" }
                 ]
             },
             btech: {
@@ -350,8 +350,8 @@
                 period: "2020 – May 2024",
                 score: "CGPA: 7.0 / 10",
                 overview: "Undergraduate degree in Computer Science and Engineering.",
-                stages: [["Degree period", "Computer Science and Engineering", "May 2020 – May 2024"]],
-                certificates: [{ label: "B.Tech certificate / provisional certificate (add PDF)", href: "assets/certificates/btech-degree.pdf" }]
+                stages: [["Degree period", "Computer Science and Engineering", "2020 – May 2024"]],
+                certificates: [{ label: "B.Tech degree / provisional certificate", filename: "btech-degree.pdf" }]
             },
             intermediate: {
                 title: "Intermediate",
@@ -360,7 +360,7 @@
                 score: "9.0 / 10",
                 overview: "Intermediate education completed at Sri Chaitanya Junior College.",
                 stages: [["Study period", "Intermediate", "2018 – 2020"]],
-                certificates: [{ label: "Intermediate marks memo (add PDF)", href: "assets/certificates/intermediate-memo.pdf" }]
+                certificates: [{ label: "Intermediate marks memo", filename: "intermediate-memo.pdf" }]
             },
             ssc: {
                 title: "Secondary School Certificate (SSC)",
@@ -369,7 +369,7 @@
                 score: "10.0 / 10",
                 overview: "Secondary school education completed at Little Angels High School.",
                 stages: [["Completion", "SSC", "2018"]],
-                certificates: [{ label: "SSC marks memo (add PDF)", href: "assets/certificates/ssc-memo.pdf" }]
+                certificates: [{ label: "SSC marks memo", filename: "ssc-memo.pdf" }]
             }
         };
 
@@ -390,7 +390,7 @@
                     <p>${stage[2]}</p>
                 </div>`).join("");
             const certificates = item.certificates.map(file => `
-                <li><a href="${file.href}" target="_blank" rel="noopener noreferrer">${file.label}</a></li>`).join("");
+                <li class="certificate-pending"><span>${file.label}</span><code>${file.filename}</code><small>Not uploaded yet</small></li>`).join("");
             educationModalContent.innerHTML = `
                 <p class="education-modal-institution">${item.institution}</p>
                 <p class="education-modal-period"><strong>Period:</strong> ${item.period}</p>
@@ -399,7 +399,7 @@
                 <h3>Timeline</h3>
                 <div class="education-modal-stages">${stages}</div>
                 <h3>Certificates &amp; documents</h3>
-                <p class="certificate-note">Certificate links will work after you add the corresponding PDF files to the website repository.</p>
+                <p class="certificate-note">The filenames below are ready for your PDFs. Upload your certificates into <code>assets/certificates/</code>, then I can connect each file to its popup.</p>
                 <ul class="education-certificate-list">${certificates}</ul>
             `;
             educationModal.hidden = false;
