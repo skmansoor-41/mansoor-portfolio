@@ -1117,3 +1117,34 @@ body.modal-open {
         grid-template-columns: 1fr;
     }
 }
+
+
+.certificate-pending {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 12px;
+    padding: 12px 14px;
+    border: 1px solid #dce5ee;
+    border-radius: 9px;
+    background: #f8fbfd;
+    color: #344256;
+    list-style-position: inside;
+}
+
+.certificate-pending code {
+    color: #087ea4;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.certificate-pending small {
+    grid-column: 1 / -1;
+    color: #64748b;
+    font-size: 11px;
+}
+
+@media (max-width: 560px) {
+    .certificate-pending {
+        grid-template-columns: 1fr;
+    }
+}
