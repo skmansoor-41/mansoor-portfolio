@@ -784,3 +784,165 @@ footer {
         margin-left: 0;
     }
 }
+
+
+/* ==========================================
+   CLEAN LIGHT THEME — WHITE, NAVY & BLUE
+   Palette overrides for every portfolio section
+========================================== */
+:root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --panel-light: #f4f8fc;
+    --cyan: #087ea4;
+    --text: #172033;
+    --muted: #5d6879;
+    --border: #dce5ee;
+}
+
+html, body {
+    background: #ffffff;
+    color: #172033;
+}
+
+.site-header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 4px 18px rgba(20, 40, 70, 0.04);
+}
+
+.logo, .hero h1, .section h2, .skill-card h3,
+.project-card h3, .education-card h3, .experience-card h3 {
+    color: #172033;
+}
+
+.logo span, .hero h1 span, .section h2 span,
+.small-text, .section-label, .skill-number,
+.skill-status, .project-type, .education-level,
+.detail-label, .experience-date, .contact-links a {
+    color: #087ea4;
+}
+
+.nav-links a, .hero h2, .secondary-btn, .hero-socials a,
+.visual-title, .card-label, .education-card h4,
+.experience-card h4 {
+    color: #465469;
+}
+
+.nav-links a:hover, .nav-links a:focus-visible,
+.hero-socials a:hover, .contact-links a:hover {
+    color: #087ea4;
+}
+
+.hero-description, .section-text, .skill-card p,
+.project-description, .experience-card > p:last-child,
+.education-summary, .education-institution,
+.education-details p, .contact > p:not(.section-label) {
+    color: #5d6879;
+}
+
+.primary-btn {
+    background: #087ea4;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    box-shadow: 0 10px 30px rgba(8, 126, 164, 0.2);
+}
+
+.secondary-btn {
+    border-color: #cbd5e1;
+    color: #344256;
+}
+
+.secondary-btn:hover {
+    border-color: #087ea4;
+    color: #087ea4;
+}
+
+.data-card {
+    background: linear-gradient(145deg, #e9f7fb, #ffffff);
+    border-color: #d6e7ef;
+}
+
+.visual-title, .visual-footer {
+    color: #64748b;
+}
+
+.data-card strong, .project-icon {
+    color: #087ea4;
+}
+
+.project-icon {
+    background: #e6f5fa;
+}
+
+.data-line {
+    background: #087ea4;
+}
+
+.skill-card, .education-card {
+    background: #ffffff;
+    border-color: #dce5ee;
+    box-shadow: 0 8px 24px rgba(20, 40, 70, 0.045);
+}
+
+.skill-card:hover, .education-card:hover {
+    border-color: #70bdd3;
+    box-shadow: 0 12px 28px rgba(20, 80, 110, 0.08);
+}
+
+.project-card, .experience-card {
+    background: #ffffff;
+    border-color: #dce5ee;
+    box-shadow: 0 8px 24px rgba(20, 40, 70, 0.045);
+}
+
+.project-card:hover {
+    border-color: #70bdd3;
+    box-shadow: 0 12px 30px rgba(8, 126, 164, 0.1);
+}
+
+.project-index, .project-footer, footer {
+    color: #64748b;
+}
+
+.project-tags span {
+    color: #344256;
+    background: #f0f6fb;
+    border-color: #dce5ee;
+}
+
+.project-footer, .education-details, .education-result {
+    border-color: #e2e8f0;
+}
+
+.education-featured {
+    border-color: #b7dce8;
+    background: linear-gradient(145deg, #ffffff, #f7fbfe);
+}
+
+.education-period {
+    color: #64748b;
+}
+
+.education-details strong, .education-result strong {
+    color: #172033;
+}
+
+.result-score {
+    color: #087ea4;
+    background: #eaf7fb;
+    border-color: #c8e7f0;
+}
+
+footer {
+    border-top-color: #e2e8f0;
+    background: #ffffff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .skill-card:hover, .project-card:hover, .education-card:hover {
+        transform: translateY(-3px);
+    }
+}
