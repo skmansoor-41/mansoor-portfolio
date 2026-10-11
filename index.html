@@ -256,49 +256,36 @@
 
         <!-- Experience -->
         <section id="experience" class="section">
-            <p class="section-label">05 — EXPERIENCE</p>
-            <h2>Professional <span>journey.</span></h2>
+            <p class="section-label">05 — PROFESSIONAL JOURNEY</p>
+            <h2>My professional <span>journey.</span></h2>
+            <p class="section-text">Explore each role to learn about my journey, responsibilities, skills and supporting certificates.</p>
 
-            <article class="experience-card">
-                <p class="experience-date">MAY 2026 — PRESENT</p>
-                <h3>Banker Customer Services (BCS) — Branch Operations</h3>
-                <h4>IDFC FIRST Bank | On-roll</h4>
-                <p><strong>Guntur Branch · Joined May 2026</strong></p>
-                <p>
-                    Supporting branch banking operations and customer service, helping
-                    customers with banking services and day-to-day operational requirements.
-                </p>
-            </article>
+            <div class="experience-list">
+                <article class="experience-card experience-clickable" data-experience="guntur" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for IDFC FIRST Bank branch operations in Guntur">
+                    <p class="experience-date">MAY 2026 — PRESENT</p>
+                    <h3>Banking Customer Services — Branch Operations</h3>
+                    <h4>IDFC FIRST Bank · Guntur Branch</h4>
+                    <p>Customer service and day-to-day branch banking operations.</p>
+                    <p class="experience-click-hint">Click to explore my work, skills and certificates ↗</p>
+                </article>
 
-            <article class="experience-card">
-                <p class="experience-date">FEB 2026 — MAY 2026</p>
-                <h3>Banking Internship</h3>
-                <h4>IDFC FIRST Bank | Kakinada</h4>
-                <p><strong>February 2026 – May 2026</strong></p>
-                <p>
-                    Completed branch-based internship experience, gaining exposure to
-                    customer service and day-to-day branch banking operations.
-                </p>
-            </article>
+                <article class="experience-card experience-clickable" data-experience="internship" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for IDFC FIRST Bank banking internship in Kakinada">
+                    <p class="experience-date">FEBRUARY 2026 — MAY 2026</p>
+                    <h3>Banking Internship</h3>
+                    <h4>IDFC FIRST Bank · Kakinada</h4>
+                    <p>Practical exposure to branch banking, customer service and operational processes.</p>
+                    <p class="experience-click-hint">Click to explore my learning journey and certificates ↗</p>
+                </article>
 
-            <article class="experience-card">
-                <p class="experience-date">NOV 2024 — SEP 2025</p>
-                <h3>Direct Sales Team — Small Ticket Loan Against Property (STLAP / Suvidha)</h3>
-                <h4>IDFC FIRST Bank | Off-roll</h4>
-                <p><strong>Joined November 2024</strong></p>
-                <p>
-                    Supported loan sales and customer engagement, followed up on leads,
-                    coordinated with customers and maintained Excel-based tracking and reporting.
-                </p>
-                <p><strong>Payroll / service partner history:</strong></p>
-                <ul>
-                    <li>ME Hin Technologies — 20 November 2024 to 20 March 2025</li>
-                    <li>Resowhiz Biz Solutions — 21 March 2025 to 6 July 2025</li>
-                    <li>Buzzworks Business Services Pvt. Ltd. — 7 July 2025 to 3 September 2025</li>
-                </ul>
-            </article>
+                <article class="experience-card experience-clickable" data-experience="sales" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for IDFC FIRST Bank loan sales experience">
+                    <p class="experience-date">NOVEMBER 2024 — SEPTEMBER 2025</p>
+                    <h3>Direct Sales Team — Small Ticket Loan Against Property</h3>
+                    <h4>IDFC FIRST Bank · Off-roll role</h4>
+                    <p>Loan sales, customer engagement, lead follow-ups and Excel-based tracking and reporting.</p>
+                    <p class="experience-click-hint">Click to explore my responsibilities, skills and certificates ↗</p>
+                </article>
+            </div>
         </section>
-
         <!-- Contact -->
         <section id="contact" class="section contact">
             <p class="section-label">06 — CONTACT</p>
@@ -314,6 +301,122 @@
     <footer>
         <p>© 2026 Mansoor Shaik. Built with HTML, CSS &amp; JavaScript.</p>
     </footer>
+
+
+    <!-- Professional journey detail popup -->
+    <div class="experience-modal education-modal" id="experienceModal" role="dialog" aria-modal="true" aria-labelledby="experienceModalTitle" hidden>
+        <div class="education-modal-backdrop" data-close-experience></div>
+        <section class="education-modal-panel">
+            <button class="education-modal-close" type="button" aria-label="Close professional journey details" data-close-experience>×</button>
+            <p class="section-label">PROFESSIONAL JOURNEY</p>
+            <h2 id="experienceModalTitle">Experience details</h2>
+            <div id="experienceModalContent"></div>
+        </section>
+    </div>
+
+    <script>
+        const experienceInfo = {
+            guntur: {
+                title: "Banking Customer Services — Branch Operations",
+                company: "IDFC FIRST Bank",
+                location: "Guntur Branch, Andhra Pradesh",
+                period: "May 2026 – Present",
+                journey: "My current branch-banking role focuses on helping customers and supporting day-to-day branch operations. Add your personal journey here, including milestones, training and achievements.",
+                responsibilities: [
+                    "Assist customers with banking services and routine service requests.",
+                    "Support day-to-day branch operations and follow established processes.",
+                    "Help maintain accurate customer information and operational records.",
+                    "Coordinate with colleagues to resolve customer queries and service needs."
+                ],
+                skills: ["Customer service", "Branch operations", "Process accuracy", "Customer communication", "Record handling"],
+                certificate: "Add relevant training or recognition certificates when available."
+            },
+            internship: {
+                title: "Banking Internship",
+                company: "IDFC FIRST Bank",
+                location: "Kakinada, Andhra Pradesh",
+                period: "February 2026 – May 2026",
+                journey: "This internship gave me practical exposure to branch banking and customer service. Add your personal learning experience, key moments and achievements here.",
+                responsibilities: [
+                    "Learned branch banking procedures and customer-service workflows.",
+                    "Observed and supported routine operational activities under guidance.",
+                    "Built familiarity with banking products, service processes and customer interactions."
+                ],
+                skills: ["Banking fundamentals", "Customer service", "Communication", "Operational awareness", "Teamwork"],
+                certificate: "Add internship completion certificate when available."
+            },
+            sales: {
+                title: "Direct Sales Team — Small Ticket Loan Against Property",
+                company: "IDFC FIRST Bank · Off-roll role",
+                location: "Hyderabad",
+                period: "November 2024 – September 2025",
+                journey: "I worked in loan sales and customer engagement for Small Ticket Loan Against Property (STLAP / Suvidha). Add your personal career story, targets, milestones and achievements here.",
+                responsibilities: [
+                    "Followed up on leads received from call-centre and other customer channels.",
+                    "Engaged customers, understood requirements and checked broad product eligibility.",
+                    "Coordinated customer follow-ups and loan-case progress with relevant teams.",
+                    "Maintained Excel-based lead tracking and sales reporting.",
+                    "Supported retention cases and customer communication."
+                ],
+                skills: ["Loan sales", "Lead management", "Customer engagement", "Follow-ups", "Excel reporting", "Stakeholder coordination"],
+                certificate: "Add relevant sales training, Elevate training or award certificates when available."
+            }
+        };
+
+        const experienceModal = document.getElementById("experienceModal");
+        const experienceModalTitle = document.getElementById("experienceModalTitle");
+        const experienceModalContent = document.getElementById("experienceModalContent");
+        let lastExperienceTrigger = null;
+
+        function openExperienceDetails(key, trigger) {
+            const item = experienceInfo[key];
+            if (!item) return;
+            lastExperienceTrigger = trigger;
+            experienceModalTitle.textContent = item.title;
+            const responsibilities = item.responsibilities.map(text => `<li>${text}</li>`).join("");
+            const skills = item.skills.map(skill => `<span class="experience-skill-tag">${skill}</span>`).join("");
+            experienceModalContent.innerHTML = `
+                <p class="education-modal-institution"><strong>${item.company}</strong> · ${item.location}</p>
+                <p class="education-modal-period"><strong>Period:</strong> ${item.period}</p>
+                <h3>My journey</h3>
+                <p class="education-modal-overview">${item.journey}</p>
+                <h3>Key responsibilities &amp; work</h3>
+                <ul class="experience-responsibilities">${responsibilities}</ul>
+                <h3>Skills gained / applied</h3>
+                <div class="experience-skill-tags">${skills}</div>
+                <h3>Certificates &amp; supporting documents</h3>
+                <p class="certificate-note">${item.certificate}</p>
+                <p class="certificate-note">When ready, add any shareable certificate PDF under <code>assets/certificates/</code>. Do not upload payslips or private documents to this public repository.</p>
+            `;
+            experienceModal.hidden = false;
+            document.body.classList.add("modal-open");
+            experienceModal.querySelector("[data-close-experience]").focus();
+        }
+
+        document.querySelectorAll("[data-experience]").forEach(card => {
+            card.addEventListener("click", () => openExperienceDetails(card.dataset.experience, card));
+            card.addEventListener("keydown", event => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openExperienceDetails(card.dataset.experience, card);
+                }
+            });
+        });
+
+        function closeExperienceDetails() {
+            experienceModal.hidden = true;
+            document.body.classList.remove("modal-open");
+            if (lastExperienceTrigger) lastExperienceTrigger.focus();
+        }
+
+        experienceModal.querySelectorAll("[data-close-experience]").forEach(button => {
+            button.addEventListener("click", closeExperienceDetails);
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape" && !experienceModal.hidden) closeExperienceDetails();
+        });
+    </script>
 
     <!-- Education details popup -->
     <div class="education-modal" id="educationModal" role="dialog" aria-modal="true" aria-labelledby="educationModalTitle" hidden>
