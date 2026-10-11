@@ -1148,3 +1148,92 @@ body.modal-open {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================
+   CLICKABLE PROFESSIONAL JOURNEY CARDS
+========================================== */
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.experience-card.experience-clickable {
+    min-width: 0;
+    margin-top: 0;
+    cursor: pointer;
+    background: #ffffff;
+    border-color: #dce5ee;
+    box-shadow: 0 8px 24px rgba(20, 40, 70, 0.045);
+    outline: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card.experience-clickable:hover,
+.experience-card.experience-clickable:focus-visible {
+    transform: translateY(-4px);
+    border-color: #70bdd3;
+    box-shadow: 0 12px 30px rgba(8, 126, 164, 0.1);
+}
+
+.experience-card.experience-clickable:focus-visible {
+    outline: 3px solid #087ea4;
+    outline-offset: 4px;
+}
+
+.experience-card.experience-clickable h3 {
+    color: #172033;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.experience-card.experience-clickable h4 {
+    color: #465469;
+}
+
+.experience-card.experience-clickable > p:not(.experience-date):not(.experience-click-hint) {
+    color: #5d6879;
+    line-height: 1.7;
+}
+
+.experience-click-hint {
+    margin-top: 16px;
+    color: #087ea4;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.experience-responsibilities {
+    padding-left: 22px;
+    color: #5d6879;
+    line-height: 1.75;
+}
+
+.experience-responsibilities li + li {
+    margin-top: 7px;
+}
+
+.experience-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.experience-skill-tag {
+    display: inline-flex;
+    padding: 7px 10px;
+    border: 1px solid #cfe7ef;
+    border-radius: 7px;
+    background: #eaf7fb;
+    color: #086b89;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
+}
