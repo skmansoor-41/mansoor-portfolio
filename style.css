@@ -946,3 +946,174 @@ footer {
         transform: translateY(-3px);
     }
 }
+
+
+/* ==========================================
+   INTERACTIVE EDUCATION CARDS & DETAIL POPUP
+========================================== */
+.education-card[data-education] {
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.education-card[data-education]:focus-visible {
+    outline: 3px solid #087ea4;
+    outline-offset: 4px;
+}
+
+.education-click-hint {
+    margin-top: 14px;
+    color: #087ea4;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.education-modal[hidden] {
+    display: none !important;
+}
+
+.education-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+}
+
+.education-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.58);
+    backdrop-filter: blur(4px);
+}
+
+.education-modal-panel {
+    position: relative;
+    z-index: 1;
+    width: min(760px, 100%);
+    max-height: min(84vh, 850px);
+    overflow-y: auto;
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid #dce5ee;
+    border-radius: 18px;
+    background: #ffffff;
+    color: #172033;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.25);
+}
+
+.education-modal-close {
+    position: sticky;
+    float: right;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin: -8px -8px 8px 16px;
+    border: 1px solid #dce5ee;
+    border-radius: 50%;
+    background: #f5f9fc;
+    color: #172033;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.education-modal-panel h2 {
+    clear: both;
+    margin: 10px 0 12px;
+    color: #172033;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.25;
+}
+
+.education-modal-panel h3 {
+    margin: 26px 0 12px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.education-modal-institution,
+.education-modal-overview {
+    color: #5d6879;
+    line-height: 1.75;
+}
+
+.education-modal-period,
+.education-modal-score {
+    margin-top: 12px;
+    color: #344256;
+}
+
+.education-modal-period strong,
+.education-modal-score strong {
+    color: #172033;
+}
+
+.education-modal-stages {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.education-modal-stage {
+    padding: 17px;
+    border: 1px solid #dce5ee;
+    border-radius: 10px;
+    background: #f8fbfd;
+}
+
+.education-modal-stage strong {
+    display: block;
+    margin-top: 7px;
+    color: #172033;
+    font-size: 14px;
+}
+
+.education-modal-stage p {
+    margin-top: 5px;
+    color: #5d6879;
+    font-size: 13px;
+}
+
+.certificate-note {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.education-certificate-list {
+    display: grid;
+    gap: 9px;
+    margin: 12px 0 0;
+    padding-left: 20px;
+}
+
+.education-certificate-list a {
+    color: #087ea4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 560px) {
+    .education-modal {
+        padding: 10px;
+    }
+
+    .education-modal-panel {
+        max-height: 90vh;
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .education-modal-stages {
+        grid-template-columns: 1fr;
+    }
+}
