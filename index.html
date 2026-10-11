@@ -71,10 +71,14 @@
             <p class="section-label">01 — ABOUT ME</p>
             <h2>Building my path into <span>Data Analytics.</span></h2>
             <p class="section-text">
-                I am a Computer Science graduate with professional experience in banking
-                operations, customer data handling and Excel-based reporting. I am currently
-                developing my data analytics skills and building practical projects using
-                analytical tools to solve business problems.
+                I am a Computer Science graduate with hands-on banking experience across both
+                sales and branch operations. My sales experience includes customer engagement,
+                lead follow-ups, loan-product eligibility checks, customer retention and
+                coordination for Loan Against Property cases. In branch banking, I support
+                day-to-day operations, customer service, banking requests and process accuracy.
+                I have also worked with customer data, Excel-based tracking and reporting.
+                I am now building my data analytics skills to connect my banking experience
+                with data-driven business decisions.
             </p>
         </section>
 
@@ -172,7 +176,7 @@
             </p>
 
             <div class="education-list">
-                <article class="education-card education-featured">
+                <article class="education-card education-featured" data-education="pg" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for PG Diploma in Banking and Customer Services">
                     <div class="education-card-top">
                         <span class="education-level">PROFESSIONAL PROGRAMME</span>
                         <span class="education-period">SEP 2025 — OCT 2026</span>
@@ -182,6 +186,7 @@
                     <p class="education-summary">
                         A banking-focused programme combining classroom learning, internship experience and on-the-job training.
                     </p>
+                    <p class="education-click-hint">Click to view programme details, results and certificates ↗</p>
                     <div class="education-details">
                         <div>
                             <span class="detail-label">CLASSROOM TRAINING</span>
@@ -201,14 +206,15 @@
                     </div>
                 </article>
 
-                <article class="education-card">
+                <article class="education-card" data-education="btech" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for B.Tech"> 
                     <div class="education-card-top">
                         <span class="education-level">UNDERGRADUATE DEGREE</span>
-                        <span class="education-period">2020 — 2024</span>
+                        <span class="education-period">May 2020 — May 2024</span>
                     </div>
                     <h3>Bachelor of Technology (B.Tech)</h3>
                     <h4>Computer Science and Engineering</h4>
                     <p class="education-institution">University College of Engineering, Narasaraopet · JNTU</p>
+                    <p class="education-click-hint">Click to view degree details and certificates ↗</p>
                     <div class="education-result">
                         <span class="detail-label">GRADUATED</span>
                         <strong>May 2024</strong>
@@ -216,28 +222,30 @@
                     </div>
                 </article>
 
-                <article class="education-card">
+                <article class="education-card" data-education="intermediate" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Intermediate"> 
                     <div class="education-card-top">
                         <span class="education-level">INTERMEDIATE</span>
-                        <span class="education-period">2018 — 2020</span>
+                        <span class="education-period">June 2018 — March 2020</span>
                     </div>
                     <h3>Intermediate</h3>
                     <h4>Sri Chaitanya Junior College</h4>
                     <p class="education-institution">Bapatla, Andhra Pradesh</p>
+                    <p class="education-click-hint">Click to view education details and certificates ↗</p>
                     <div class="education-result">
                         <span class="detail-label">SCORE</span>
                         <strong>9.0 / 10</strong>
                     </div>
                 </article>
 
-                <article class="education-card">
+                <article class="education-card" data-education="ssc" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for SSC"> 
                     <div class="education-card-top">
                         <span class="education-level">SECONDARY SCHOOL</span>
-                        <span class="education-period">2018</span>
+                        <span class="education-period">March 2018</span>
                     </div>
                     <h3>Secondary School Certificate (SSC)</h3>
                     <h4>Little Angels High School</h4>
                     <p class="education-institution">Bapatla, Andhra Pradesh</p>
+                    <p class="education-click-hint">Click to view education details and certificates ↗</p>
                     <div class="education-result">
                         <span class="detail-label">SCORE</span>
                         <strong>10.0 / 10</strong>
@@ -304,7 +312,125 @@
     </main>
 
     <footer>
-        <p>© 2026 Mansoor Shaik. Built with HTML &amp; CSS.</p>
+        <p>© 2026 Mansoor Shaik. Built with HTML, CSS &amp; JavaScript.</p>
     </footer>
+
+    <!-- Education details popup -->
+    <div class="education-modal" id="educationModal" role="dialog" aria-modal="true" aria-labelledby="educationModalTitle" hidden>
+        <div class="education-modal-backdrop" data-close-education></div>
+        <section class="education-modal-panel">
+            <button class="education-modal-close" type="button" aria-label="Close education details" data-close-education>×</button>
+            <p class="section-label">EDUCATION DETAILS</p>
+            <h2 id="educationModalTitle">Education</h2>
+            <div id="educationModalContent"></div>
+        </section>
+    </div>
+
+    <script>
+        const educationInfo = {
+            pg: {
+                title: "PG Diploma in Banking and Customer Services",
+                institution: "Manipal",
+                period: "September 2025 – October 2026",
+                score: "No final score added yet",
+                overview: "A professional banking programme combining classroom learning, a bank internship and on-the-job training.",
+                stages: [
+                    ["Classroom training", "Bengaluru", "September 2025 – January 2026"],
+                    ["Banking internship", "IDFC FIRST Bank · Kakinada", "February 2026 – May 2026"],
+                    ["On-the-job training", "Banking operations and customer service", "May 2026 – October 2026"]
+                ],
+                certificates: [
+                    { label: "PG Diploma certificate (add PDF)", href: "assets/certificates/pg-diploma.pdf" },
+                    { label: "Training certificate (add PDF)", href: "assets/certificates/banking-training.pdf" }
+                ]
+            },
+            btech: {
+                title: "Bachelor of Technology (B.Tech)",
+                institution: "University College of Engineering, Narasaraopet · JNTU",
+                period: "May 2020 – May 2024",
+                score: "CGPA: 7.0 / 10",
+                overview: "Undergraduate degree in Computer Science and Engineering.",
+                stages: [["Degree period", "Computer Science and Engineering", "May 2020 – May 2024"]],
+                certificates: [{ label: "B.Tech certificate / provisional certificate (add PDF)", href: "assets/certificates/btech-degree.pdf" }]
+            },
+            intermediate: {
+                title: "Intermediate",
+                institution: "Sri Chaitanya Junior College · Bapatla, Andhra Pradesh",
+                period: "June 2018 – March 2020",
+                score: "9.0 / 10",
+                overview: "Intermediate education completed at Sri Chaitanya Junior College.",
+                stages: [["Study period", "Intermediate", "June 2018 – March 2020"]],
+                certificates: [{ label: "Intermediate marks memo (add PDF)", href: "assets/certificates/intermediate-memo.pdf" }]
+            },
+            ssc: {
+                title: "Secondary School Certificate (SSC)",
+                institution: "Little Angels High School · Bapatla, Andhra Pradesh",
+                period: "March 2018",
+                score: "10.0 / 10",
+                overview: "Secondary school education completed at Little Angels High School.",
+                stages: [["Completion", "SSC", "March 2018"]],
+                certificates: [{ label: "SSC marks memo (add PDF)", href: "assets/certificates/ssc-memo.pdf" }]
+            }
+        };
+
+        const educationModal = document.getElementById("educationModal");
+        const educationModalTitle = document.getElementById("educationModalTitle");
+        const educationModalContent = document.getElementById("educationModalContent");
+        let lastEducationTrigger = null;
+
+        function openEducationDetails(key, trigger) {
+            const item = educationInfo[key];
+            if (!item) return;
+            lastEducationTrigger = trigger;
+            educationModalTitle.textContent = item.title;
+            const stages = item.stages.map(stage => `
+                <div class="education-modal-stage">
+                    <span class="detail-label">${stage[0]}</span>
+                    <strong>${stage[1]}</strong>
+                    <p>${stage[2]}</p>
+                </div>`).join("");
+            const certificates = item.certificates.map(file => `
+                <li><a href="${file.href}" target="_blank" rel="noopener noreferrer">${file.label}</a></li>`).join("");
+            educationModalContent.innerHTML = `
+                <p class="education-modal-institution">${item.institution}</p>
+                <p class="education-modal-period"><strong>Period:</strong> ${item.period}</p>
+                <p class="education-modal-score"><strong>Score / result:</strong> ${item.score}</p>
+                <p class="education-modal-overview">${item.overview}</p>
+                <h3>Timeline</h3>
+                <div class="education-modal-stages">${stages}</div>
+                <h3>Certificates &amp; documents</h3>
+                <p class="certificate-note">Certificate links will work after you add the corresponding PDF files to the website repository.</p>
+                <ul class="education-certificate-list">${certificates}</ul>
+            `;
+            educationModal.hidden = false;
+            document.body.classList.add("modal-open");
+            educationModal.querySelector("[data-close-education]").focus();
+        }
+
+        document.querySelectorAll("[data-education]").forEach(card => {
+            card.addEventListener("click", () => openEducationDetails(card.dataset.education, card));
+            card.addEventListener("keydown", event => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openEducationDetails(card.dataset.education, card);
+                }
+            });
+        });
+
+        function closeEducationDetails() {
+            educationModal.hidden = true;
+            document.body.classList.remove("modal-open");
+            if (lastEducationTrigger) lastEducationTrigger.focus();
+        }
+
+        educationModal.querySelectorAll("[data-close-education]").forEach(button => {
+            button.addEventListener("click", closeEducationDetails);
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape" && !educationModal.hidden) closeEducationDetails();
+        });
+    </script>
+
 </body>
 </html>
