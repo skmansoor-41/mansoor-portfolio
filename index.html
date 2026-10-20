@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mansoor Shaik — aspiring Data Analyst building skills in Excel, SQL, Power BI and Python, with professional banking and reporting experience.">
     <title>Mansoor Shaik | Aspiring Data Analyst</title>
-    <link rel="stylesheet" href="style.css?v=professional-journey-20261011">
+    <link rel="stylesheet" href="style.css?v=hello-doll-20261020">
 </head>
 <body>
     <!-- Navigation -->
@@ -533,6 +533,41 @@
         document.addEventListener("keydown", event => {
             if (event.key === "Escape" && !educationModal.hidden) closeEducationDetails();
         });
+    </script>
+
+    <!-- Friendly welcome doll -->
+    <aside class="hello-doll-widget" id="hello-doll-widget" aria-label="Portfolio welcome assistant">
+        <div class="hello-doll-bubble" id="hello-doll-bubble" role="status" aria-live="polite">
+            <button class="hello-doll-close" id="hello-doll-close" type="button" aria-label="Close greeting">×</button>
+            <strong>Hello there! 👋</strong>
+            <span>Welcome to Mansoor's portfolio.</span>
+        </div>
+        <button class="hello-doll-avatar" id="hello-doll-avatar" type="button" aria-label="Say hello and show welcome message" aria-controls="hello-doll-bubble" aria-expanded="true">
+            <span aria-hidden="true">👧🏻</span>
+            <span class="hello-doll-sparkle" aria-hidden="true">✦</span>
+        </button>
+    </aside>
+
+    <script>
+        (() => {
+            const avatar = document.getElementById("hello-doll-avatar");
+            const bubble = document.getElementById("hello-doll-bubble");
+            const close = document.getElementById("hello-doll-close");
+            if (!avatar || !bubble || !close) return;
+
+            const setGreetingVisible = (visible) => {
+                bubble.hidden = !visible;
+                avatar.setAttribute("aria-expanded", String(visible));
+            };
+
+            close.addEventListener("click", (event) => {
+                event.stopPropagation();
+                setGreetingVisible(false);
+            });
+            avatar.addEventListener("click", () => {
+                setGreetingVisible(bubble.hidden);
+            });
+        })();
     </script>
 
 </body>
