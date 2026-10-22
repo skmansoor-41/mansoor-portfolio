@@ -1362,3 +1362,45 @@ body.modal-open {
         animation: none;
     }
 }
+
+
+/* ==========================================
+   PUBLIC PORTFOLIO VISIT COUNTER
+========================================== */
+.portfolio-visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 22px;
+    padding: 9px 12px;
+    border: 1px solid #dce5ee;
+    border-radius: 10px;
+    background: #f8fbfd;
+    color: #465469;
+    font-size: 12px;
+}
+
+.visitor-counter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.portfolio-visitor-counter a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.portfolio-visitor-counter img {
+    display: block;
+    min-width: 72px;
+    min-height: 18px;
+}
+
+@media (max-width: 600px) {
+    .portfolio-visitor-counter {
+        margin-top: 18px;
+    }
+}
