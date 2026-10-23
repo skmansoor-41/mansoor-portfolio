@@ -1404,3 +1404,69 @@ body.modal-open {
         margin-top: 18px;
     }
 }
+
+
+/* ==========================================
+   GOOGLE SIGN-IN SECTION
+========================================== */
+.login-section { max-width: 900px; margin: 0 auto; }
+.login-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 14px 18px;
+    max-width: 650px;
+    margin: 30px auto 0;
+    padding: 28px;
+    border: 1px solid #dce5ee;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(20, 40, 70, 0.06);
+}
+.login-google-mark {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    color: #4285f4;
+    background: #fff;
+    font-size: 27px;
+    font-weight: 700;
+}
+.login-copy h3 { margin: 0 0 5px; color: #172033; font-size: 19px; }
+.login-copy p, .login-setup-note { margin: 0; color: #64748b; font-size: 13px; line-height: 1.6; }
+.login-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+.google-login-button, .google-logout-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 0 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #263445;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.google-login-button span { color: #4285f4; font-size: 19px; font-weight: 700; }
+.google-login-button:hover:not(:disabled), .google-logout-button:hover { background: #f8fbfd; border-color: #087ea4; box-shadow: 0 4px 12px rgba(20, 40, 70, .08); }
+.google-login-button:disabled { opacity: .55; cursor: not-allowed; }
+.login-user { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.login-user[hidden], .google-logout-button[hidden] { display: none !important; }
+.login-user img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #eaf7fb; }
+.login-user strong, .login-user span { display: block; overflow-wrap: anywhere; }
+.login-user strong { color: #172033; font-size: 14px; }
+.login-user span { margin-top: 3px; color: #64748b; font-size: 12px; }
+.login-setup-note { grid-column: 1 / -1; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+@media (max-width: 560px) {
+    .login-card { padding: 21px; }
+    .login-actions { flex-direction: column; }
+    .google-login-button, .google-logout-button { width: 100%; }
+}
