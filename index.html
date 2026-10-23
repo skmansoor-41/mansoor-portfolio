@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mansoor Shaik — aspiring Data Analyst building skills in Excel, SQL, Power BI and Python, with professional banking and reporting experience.">
     <title>Mansoor Shaik | Aspiring Data Analyst</title>
-    <link rel="stylesheet" href="style.css?v=visitor-counter-20261022">
+    <link rel="stylesheet" href="style.css?v=google-login-20261024">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,6 +19,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#login">Sign in</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -292,9 +293,35 @@
                 </article>
             </div>
         </section>
+
+        <!-- Google sign-in -->
+        <section id="login" class="section login-section">
+            <p class="section-label">06 — VISITOR ACCOUNT</p>
+            <h2>Welcome. <span>Sign in.</span></h2>
+            <p class="section-text">Sign in securely with your Google account. Your Google password is never shared with this website.</p>
+            <div class="login-card">
+                <div class="login-google-mark" aria-hidden="true">G</div>
+                <div class="login-copy">
+                    <h3 id="login-title">Continue with Google</h3>
+                    <p id="login-status" role="status" aria-live="polite">Google sign-in setup is required before visitors can log in.</p>
+                </div>
+                <div class="login-user" id="login-user" hidden>
+                    <img id="login-avatar" alt="" referrerpolicy="no-referrer">
+                    <div><strong id="login-name"></strong><span id="login-email"></span></div>
+                </div>
+                <div class="login-actions">
+                    <button class="google-login-button" id="google-login-button" type="button" disabled>
+                        <span aria-hidden="true">G</span> Sign in with Google
+                    </button>
+                    <button class="google-logout-button" id="google-logout-button" type="button" hidden>Sign out</button>
+                </div>
+                <p class="login-setup-note" id="login-setup-note">Website owner: connect a Firebase project and enable Google as a sign-in provider to activate this button.</p>
+            </div>
+        </section>
+
         <!-- Contact -->
         <section id="contact" class="section contact">
-            <p class="section-label">06 — CONTACT</p>
+            <p class="section-label">07 — CONTACT</p>
             <h2>Let's connect.</h2>
             <p>Interested in data, analytics, or collaboration? Feel free to reach out.</p>
             <div class="contact-links">
@@ -576,5 +603,6 @@
         })();
     </script>
 
+    <script type="module" src="auth.js"></script>
 </body>
 </html>
