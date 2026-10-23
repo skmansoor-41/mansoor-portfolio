@@ -1,9 +1,8 @@
 // Firebase web app configuration.
-// Replace each placeholder with the values from Firebase Console > Project settings > Your apps.
 // This config is public in a static website. Protect your Firebase project with appropriate security rules.
 export const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  appId: "PASTE_FIREBASE_APP_ID"
+  apiKey: "AIzaSyCySwkeKike4BgIhW8sluAkERjC5dvKIYQ",
+  authDomain: "my-portfolio-677ae.firebaseapp.com",
+  projectId: "my-portfolio-677ae",
+  appId: "1:723776897059:web:82c558a7c095282cdb3196"
 };
