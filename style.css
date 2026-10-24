@@ -1470,3 +1470,48 @@ body.modal-open {
     .login-actions { flex-direction: column; }
     .google-login-button, .google-logout-button { width: 100%; }
 }
+
+
+/* Visitor profile and email/password account forms */
+.account-panel {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding: 22px;
+    border: 1px solid #dce5ee;
+    border-radius: 12px;
+    background: #f8fbfd;
+}
+.account-panel[hidden] { display: none !important; }
+.account-panel h3 { margin: 0 0 10px; color: #172033; font-size: 17px; }
+.account-help { margin: 0 0 16px; color: #64748b; font-size: 13px; line-height: 1.6; }
+.account-form { display: grid; gap: 9px; }
+.account-form label { margin-top: 5px; color: #344256; font-size: 13px; font-weight: 650; }
+.account-form input, .account-form select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+    font-size: 14px;
+}
+.account-form input:focus, .account-form select:focus {
+    outline: 3px solid rgba(8, 126, 164, .14);
+    border-color: #087ea4;
+}
+.account-submit {
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #087ea4;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.account-submit:disabled { opacity: .6; cursor: wait; }
