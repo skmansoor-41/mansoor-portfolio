@@ -111,8 +111,11 @@ if (!configured) {
       button.disabled = true;
       setStatus("Saving your profile securely…");
       try {
-        const credential = EmailAuthProvider.credential(currentUser.email, password);
-        await linkWithCredential(currentUser, credential);
+        const alreadyHasPassword = currentUser.providerData.some(item => item.providerId === "password");
+        if (!alreadyHasPassword) {
+          const credential = EmailAuthProvider.credential(currentUser.email, password);
+          await linkWithCredential(currentUser, credential);
+        }
         await setDoc(doc(db, "visitorProfiles", currentUser.uid), {
           uid: currentUser.uid,
           firstName, secondName, phone, gender, dateOfBirth: dob,
