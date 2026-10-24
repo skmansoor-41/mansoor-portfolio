@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mansoor Shaik — aspiring Data Analyst building skills in Excel, SQL, Power BI and Python, with professional banking and reporting experience.">
     <title>Mansoor Shaik | Aspiring Data Analyst</title>
-    <link rel="stylesheet" href="style.css?v=google-login-20261024">
+    <link rel="stylesheet" href="style.css?v=visitor-profile-20261024">
 </head>
 <body>
     <!-- Navigation -->
@@ -294,28 +294,68 @@
             </div>
         </section>
 
-        <!-- Google sign-in -->
+        <!-- Visitor account -->
         <section id="login" class="section login-section">
             <p class="section-label">06 — VISITOR ACCOUNT</p>
             <h2>Welcome. <span>Sign in.</span></h2>
-            <p class="section-text">Sign in securely with your Google account. Your Google password is never shared with this website.</p>
+            <p class="section-text">Create a visitor account to save your details. Your information is stored in a private Firebase database linked to your account.</p>
             <div class="login-card">
                 <div class="login-google-mark" aria-hidden="true">G</div>
                 <div class="login-copy">
-                    <h3 id="login-title">Continue with Google</h3>
-                    <p id="login-status" role="status" aria-live="polite">Google sign-in setup is required before visitors can log in.</p>
+                    <h3 id="login-title">Sign in or create an account</h3>
+                    <p id="login-status" role="status" aria-live="polite">New visitors can continue with Google. Returning visitors can use email and password.</p>
                 </div>
                 <div class="login-user" id="login-user" hidden>
                     <img id="login-avatar" alt="" referrerpolicy="no-referrer">
                     <div><strong id="login-name"></strong><span id="login-email"></span></div>
                 </div>
                 <div class="login-actions">
-                    <button class="google-login-button" id="google-login-button" type="button" disabled>
-                        <span aria-hidden="true">G</span> Sign in with Google
-                    </button>
+                    <button class="google-login-button" id="google-login-button" type="button" disabled><span aria-hidden="true">G</span> Continue with Google</button>
                     <button class="google-logout-button" id="google-logout-button" type="button" hidden>Sign out</button>
                 </div>
-                <p class="login-setup-note" id="login-setup-note">Website owner: connect a Firebase project and enable Google as a sign-in provider to activate this button.</p>
+                <div class="account-panel" id="password-login-panel">
+                    <h3>Already registered?</h3>
+                    <form id="password-login-form" class="account-form">
+                        <label for="login-email-input">Email / Login ID</label>
+                        <input id="login-email-input" type="email" autocomplete="username" required placeholder="you@example.com">
+                        <label for="login-password-input">Password</label>
+                        <input id="login-password-input" type="password" autocomplete="current-password" required placeholder="Your password">
+                        <button class="account-submit" type="submit">Sign in with password</button>
+                    </form>
+                </div>
+                <div class="account-panel" id="profile-panel" hidden>
+                    <h3>Complete your visitor profile</h3>
+                    <p class="account-help">Please provide these details once. Also create a password so you can sign in with your email and password next time.</p>
+                    <form id="profile-form" class="account-form">
+                        <label for="profile-first-name">First name</label>
+                        <input id="profile-first-name" type="text" autocomplete="given-name" maxlength="60" required>
+                        <label for="profile-second-name">Second name</label>
+                        <input id="profile-second-name" type="text" autocomplete="family-name" maxlength="60" required>
+                        <label for="profile-phone">Phone number</label>
+                        <input id="profile-phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="10-digit mobile number" required>
+                        <label for="profile-gender">Gender</label>
+                        <select id="profile-gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-binary">Non-binary</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <label for="profile-dob">Date of birth</label>
+                        <input id="profile-dob" type="date" autocomplete="bday" required>
+                        <label for="profile-new-password">Create password (minimum 6 characters)</label>
+                        <input id="profile-new-password" type="password" autocomplete="new-password" minlength="6" required>
+                        <label for="profile-confirm-password">Confirm password</label>
+                        <input id="profile-confirm-password" type="password" autocomplete="new-password" minlength="6" required>
+                        <button class="account-submit" type="submit">Save profile and password</button>
+                    </form>
+                </div>
+                <div class="account-panel" id="signed-in-panel" hidden>
+                    <h3>Profile saved</h3>
+                    <p><strong id="saved-profile-name"></strong></p>
+                    <p id="saved-profile-phone"></p>
+                </div>
+                <p class="login-setup-note" id="login-setup-note">Firebase setup is required to activate visitor accounts.</p>
             </div>
         </section>
 
