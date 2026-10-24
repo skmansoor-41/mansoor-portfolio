@@ -20,6 +20,7 @@ const userAvatar = $("login-avatar");
 const title = $("login-title");
 const profileForm = $("profile-form");
 const passwordLoginForm = $("password-login-form");
+const passwordLoginPanel = $("password-login-panel");
 const profilePanel = $("profile-panel");
 const passwordPanel = $("password-panel");
 const signedInPanel = $("signed-in-panel");
@@ -149,7 +150,7 @@ if (!configured) {
       show(userPanel, !!user);
       show(logoutButton, !!user);
       show(googleButton, !user);
-      show(passwordLoginForm, !user);
+      show(passwordLoginPanel, !user);
       show(profilePanel, false);
       show(signedInPanel, false);
 
